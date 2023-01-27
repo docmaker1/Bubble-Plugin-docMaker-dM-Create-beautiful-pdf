@@ -1,0 +1,31 @@
+{
+    "category": "plugins",
+    "display": "dM- U- Create JSON (free)",
+    "fields": {
+        "AAV": {
+            "caption": "data_type",
+            "doc": "Name of the data type you are using to create the JSON",
+            "editor": "custom_type",
+            "name": "data_type",
+            "rank": 0
+        },
+        "AAW": {
+            "caption": "itemlist",
+            "doc": "Dynamic link to the object which contains the list of things you want to transform to JSON.",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "itemlist",
+            "rank": 1,
+            "value": "custom_data_AAV"
+        }
+    },
+    "return_value": {
+        "AAU": {
+            "caption": "jsonvalue",
+            "name": "jsonvalue",
+            "rank": 0,
+            "value": "text"
+        }
+    },
+    "type": "server_side"
+}

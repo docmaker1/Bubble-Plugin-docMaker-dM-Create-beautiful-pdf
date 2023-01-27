@@ -1,0 +1,261 @@
+{
+    "category": "plugins",
+    "display": "dM- Create pdf from webpage",
+    "fields": {
+        "ABP": {
+            "caption": "File name",
+            "doc": "Output file name, should include .pdf extension",
+            "editor": "DynamicValue",
+            "long_text": false,
+            "name": "filename",
+            "optional": false,
+            "rank": 0,
+            "value": "text"
+        },
+        "ABT": {
+            "caption": "Page URL",
+            "doc": "URL of the page you want to print",
+            "editor": "DynamicValue",
+            "name": "page_url",
+            "options": "Internal page,External URL",
+            "rank": 2,
+            "value": "text"
+        },
+        "ABU": {
+            "caption": "Page size",
+            "default_val": "a4",
+            "doc": "Page size to be used when printing to pdf. If you chose \"full_length\", the whole webpage will be printed on 1 single long pdf page.",
+            "editor": "Dropdown",
+            "name": "page_size",
+            "optional": true,
+            "options": "a3,a4,a5,letter,legal,full_length",
+            "rank": 3
+        },
+        "ABV": {
+            "caption": "Page orientation",
+            "default_val": "Portrait",
+            "editor": "Dropdown",
+            "name": "page_orientation",
+            "optional": true,
+            "options": "Landscape,Portrait",
+            "rank": 4
+        },
+        "ABW": {
+            "caption": "Left margin",
+            "default_val": "2cm",
+            "doc": "Left margin in cm, in or px. Ex : 10px",
+            "editor": "DynamicValue",
+            "name": "marginleft",
+            "rank": 8,
+            "value": "text"
+        },
+        "ABX": {
+            "caption": "Right margin",
+            "default_val": "2cm",
+            "doc": "Right margin in cm in cm, in or px. Ex : 2in",
+            "editor": "DynamicValue",
+            "name": "marginright",
+            "rank": 9,
+            "value": "text"
+        },
+        "ABY": {
+            "caption": "Top margin",
+            "default_val": "1cm",
+            "doc": "Top margin in cm, in or px. Ex : 0.5cm",
+            "editor": "DynamicValue",
+            "name": "margintop",
+            "rank": 10,
+            "value": "text"
+        },
+        "ABZ": {
+            "caption": "Bottom margin",
+            "default_val": "2cm",
+            "doc": "Bottom margin in cm, in or px. Ex : 1cm",
+            "editor": "DynamicValue",
+            "name": "marginbottom",
+            "rank": 11,
+            "value": "text"
+        },
+        "ABa": {
+            "caption": "Min load time",
+            "default_val": 0,
+            "doc": "Minimum time to load the page to be printed in seconds (from 0 to 30).",
+            "editor": "DynamicValue",
+            "name": "min_load_time",
+            "optional": true,
+            "rank": 12,
+            "value": "number"
+        },
+        "ABb": {
+            "caption": "Your app index URL",
+            "doc": "Your app homepage URL, ex : https://myapp.bubbleapps.io. You may use the \"Website home URL\" formula in Bubble.",
+            "editor": "DynamicValue",
+            "name": "appURL",
+            "rank": 1,
+            "value": "text"
+        },
+        "ABd": {
+            "caption": "Browser width",
+            "default_val": 860,
+            "doc": "The screen width (in pixels) you wish to use when viewing your page for printing. Defaults to 860 if left empty.",
+            "editor": "DynamicValue",
+            "name": "browserwidth",
+            "rank": 6,
+            "value": "number"
+        },
+        "ABe": {
+            "caption": "Browser height",
+            "default_val": 600,
+            "doc": "The screen heigth (in pixels) you wish to use when viewing your page for printing. Defaults to 600 if left empty.",
+            "editor": "DynamicValue",
+            "name": "browserheight",
+            "rank": 7,
+            "value": "number"
+        },
+        "ABh": {
+            "caption": "footer type",
+            "default_val": "Page numbers",
+            "doc": "If you chose to add \"page numbers\", the page number/ total of pages will be displayed. You also have the option to add custom html footer.",
+            "editor": "Dropdown",
+            "name": "footer",
+            "options": "No footer,Page numbers,Custom footer",
+            "rank": 13
+        },
+        "ABi": {
+            "caption": "Custom html footer ",
+            "doc": "If you have chosen to use a custom footer, add here your html code for the footer. Must include style and position.",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "custom_footer",
+            "optional": true,
+            "rank": 14,
+            "value": "text"
+        },
+        "ACJ": {
+            "caption": "Time Zone",
+            "default_val": "Europe/Paris",
+            "doc": "If dates and times are displayed on the page to be printed, you may want to set the timezone on which the page should be printed.",
+            "editor": "Dropdown",
+            "name": "timezone",
+            "optional": true,
+            "options": "Africa/Abidjan,Africa/Accra,Africa/Addis_Ababa,Africa/Asmera,Africa/Bamako,Africa/Bangui,Africa/Banjul,Africa/Blantyre,Africa/Brazzaville,Africa/Bujumbura,Africa/Cairo,Africa/Conakry,Africa/Dakar,Africa/Dar_es_Salaam,Africa/Djibouti,Africa/Douala,Africa/El_Aaiun,Africa/Freetown,Africa/Gaborone,Africa/Harare,Africa/Johannesburg,Africa/Kampala,Africa/Kigali,Africa/Kinshasa,Africa/Lagos,Africa/Libreville,Africa/Lome,Africa/Luanda,Africa/Lubumbashi,Africa/Lusaka,Africa/Malabo,Africa/Maputo,Africa/Maseru,Africa/Mbabane,Africa/Mogadishu,Africa/Monrovia,Africa/Nairobi,Africa/Ndjamena,Africa/Niamey,Africa/Nouakchott,Africa/Ouagadougou,Africa/Porto-Novo,Africa/Tunis,America/Adak,America/Anchorage,America/Anguilla,America/Antigua,America/Argentina/San_Luis,America/Aruba,America/Asuncion,America/Barbados,America/Belize,America/Bogota,America/Buenos_Aires,America/Caracas,America/Cayenne,America/Cayman,America/Chicago,America/Costa_Rica,America/Curacao,America/Denver,America/Dominica,America/Edmonton,America/El_Salvador,America/Godthab,America/Goose_Bay,America/Grenada,America/Guadeloupe,America/Guatemala,America/Guayaquil,America/Guyana,America/Halifax,America/Havana,America/Hermosillo,America/Jamaica,America/Juneau,America/Kralendijk,America/La_Paz,America/Lima,America/Los_Angeles,America/Lower_Princes,America/Manaus,America/Marigot,America/Martinique,America/Mazatlan,America/Mexico_City,America/Miquelon,America/Montevideo,America/Montserrat,America/Nassau,America/New_York,America/Noronha,America/Panama,America/Paramaribo,America/Paramaribo,America/Port_of_Spain,America/Port-au-Prince,America/Puerto_Rico,America/Rio_Branco,America/Santa_Isabel,America/Santiago,America/Santo_Domingo,America/Sao_Paulo,America/Scoresbysund,America/Scoresbysund,America/St_Johns,America/St_Kitts,America/St_Lucia,America/St_Thomas,America/St_Vincent,America/Tegucigalpa,America/Thule,America/Tijuana,America/Toronto,America/Tortola,America/Vancouver,America/Winnipeg,America/Yakutat,Antarctica/Casey,Antarctica/Davis,Antarctica/DumontDUrville,Antarctica/Macquarie,Antarctica/Mawson,Antarctica/McMurdo,Antarctica/Rothera,Antarctica/Syowa,Antarctica/Vostok,Asia/Aden,Asia/Almaty,Asia/Almaty,Asia/Amman,Asia/Anadyr,Asia/Aqtau,Asia/Aqtau,Asia/Aqtobe,Asia/Aqtobe,Asia/Aqtobe,Asia/Ashgabat,Asia/Ashgabat,Asia/Baghdad,Asia/Bahrain,Asia/Baku,Asia/Baku,Asia/Bangkok,Asia/Beirut,Asia/Bishkek,Asia/Bishkek,Asia/Brunei,Asia/Calcutta,Asia/Choibalsan,Asia/Colombo,Asia/Colombo,Asia/Damascus,Asia/Dhaka,Asia/Dhaka,Asia/Dili,Asia/Dubai,Asia/Dushanbe,Asia/Dushanbe,Asia/Hong_Kong,Asia/Hovd,Asia/Irkutsk,Asia/Jakarta,Asia/Jayapura,Asia/Jerusalem,Asia/Kabul,Asia/Kamchatka,Asia/Karachi,Asia/Karachi,Asia/Katmandu,Asia/Krasnoyarsk,Asia/Kuala_Lumpur,Asia/Kuching,Asia/Kuching,Asia/Kuwait,Asia/Macau,Asia/Magadan,Asia/Makassar,Asia/Manila,Asia/Muscat,Asia/Nicosia,Asia/Novosibirsk,Asia/Omsk,Asia/Oral,Asia/Oral,Asia/Phnom_Penh,Asia/Pyongyang,Asia/Qatar,Asia/Qyzylorda,Asia/Qyzylorda,Asia/Rangoon,Asia/Riyadh,Asia/Sakhalin,Asia/Samarkand,Asia/Seoul,Asia/Shanghai,Asia/Singapore,Asia/Taipei,Asia/Tashkent,Asia/Tashkent,Asia/Tbilisi,Asia/Tbilisi,Asia/Tehran,Asia/Thimphu,Asia/Tokyo,Asia/Ulaanbaatar,Asia/Urumqi,Asia/Vientiane,Asia/Vladivostok,Asia/Yakutsk,Asia/Yekaterinburg,Asia/Yekaterinburg,Asia/Yerevan,Asia/Yerevan,Atlantic/Azores,Atlantic/Bermuda,Atlantic/Canary,Atlantic/Cape_Verde,Atlantic/Faeroe,Atlantic/Reykjavik,Atlantic/South_Georgia,Atlantic/St_Helena,Atlantic/Stanley,Australia/Adelaide,Australia/Eucla,Australia/Lord_Howe,Australia/Perth,Australia/Sydney,Europe/Amsterdam,Europe/Andorra,Europe/Athens,Europe/Belgrade,Europe/Belgrade,Europe/Berlin,Europe/Bratislava,Europe/Brussels,Europe/Bucharest,Europe/Budapest,Europe/Copenhagen,Europe/Dublin,Europe/Dublin,Europe/Gibraltar,Europe/Helsinki,Europe/Istanbul,Europe/Kaliningrad,Europe/Ljubljana,Europe/London,Europe/London,Europe/Luxembourg,Europe/Madrid,Europe/Malta,Europe/Mariehamn,Europe/Minsk,Europe/Monaco,Europe/Moscow,Europe/Oslo,Europe/Paris,Europe/Podgorica,Europe/Prague,Europe/Rome,Europe/Samara,Europe/Samara,Europe/San_Marino,Europe/Sarajevo,Europe/Skopje,Europe/Sofia,Europe/Stockholm,Europe/Tirane,Europe/Vaduz,Europe/Vatican,Europe/Vienna,Europe/Volgograd,Europe/Warsaw,Europe/Zagreb,Europe/Zurich,Indian/Antananarivo,Indian/Chagos,Indian/Christmas,Indian/Cocos,Indian/Comoro,Indian/Kerguelen,Indian/Mahe,Indian/Maldives,Indian/Mauritius,Indian/Mayotte,Indian/Reunion,Pacific/Apia,Pacific/Auckland,Pacific/Chatham,Pacific/Easter,Pacific/Efate,Pacific/Enderbury,Pacific/Fakaofo,Pacific/Fiji,Pacific/Funafuti,Pacific/Galapagos,Pacific/Gambier,Pacific/Guadalcanal,Pacific/Guam,Pacific/Guam,Pacific/Honolulu,Pacific/Kiritimati,Pacific/Kosrae,Pacific/Kwajalein,Pacific/Majuro,Pacific/Marquesas,Pacific/Nauru,Pacific/Niue,Pacific/Norfolk,Pacific/Noumea,Pacific/Pago_Pago,Pacific/Palau,Pacific/Pitcairn,Pacific/Ponape,Pacific/Port_Moresby,Pacific/Rarotonga,Pacific/Saipan,Pacific/Saipan,Pacific/Tahiti,Pacific/Tarawa,Pacific/Tongatapu,Pacific/Truk,Pacific/Wake,Pacific/Wallis",
+            "rank": 15
+        },
+        "ACY": {
+            "caption": "page Ranges",
+            "doc": "Pages ranges to be printed to pdf: examples : 1 or 2-4 or 3-7, 8-9. Leave empty if you want to print the whole document.",
+            "editor": "DynamicValue",
+            "name": "pageranges",
+            "optional": true,
+            "rank": 5,
+            "value": "text"
+        },
+        "ACc": {
+            "caption": "Get base 64",
+            "default_val": false,
+            "doc": "Check this box if you want to get the file in a base64 format (to send it as attachement in emails as an example).",
+            "editor": "Checkbox",
+            "name": "base64",
+            "rank": 17
+        },
+        "ACd": {
+            "caption": "username",
+            "doc": "If your page is password-protected, please provide here the user email (field html ID has to be \"email\")",
+            "editor": "DynamicValue",
+            "name": "username",
+            "optional": true,
+            "rank": 19,
+            "value": "text"
+        },
+        "ACe": {
+            "caption": "password",
+            "doc": "If your page is password-protected, please provide here the user password (field html ID has to be \"password\", login button html ID has to be \"login\").",
+            "editor": "DynamicValue",
+            "name": "password",
+            "optional": true,
+            "rank": 20,
+            "value": "text"
+        },
+        "ACf": {
+            "caption": "For password-protected page  ===================",
+            "editor": "Label",
+            "name": "info_x",
+            "rank": 18
+        },
+        "ACk": {
+            "caption": "Webhook (for large files)=======================",
+            "editor": "Label",
+            "name": "info11",
+            "rank": 21
+        },
+        "ACl": {
+            "caption": "webhook_url",
+            "doc": "If you have a large file to print to pdf, you may want to receive the output file to a webhook in your app in order to avoid plugin timeouts. Type here the URL of your webhook.",
+            "editor": "DynamicValue",
+            "name": "webhook_url",
+            "optional": true,
+            "rank": 22,
+            "value": "text"
+        },
+        "ACm": {
+            "caption": "webhook_object_id",
+            "doc": "ID of the object which you can use in your webhook workflow in order to attach the output file to an object in your database.",
+            "editor": "DynamicValue",
+            "name": "webhook_object",
+            "optional": true,
+            "rank": 23,
+            "value": "text"
+        },
+        "ACn": {
+            "caption": "webhook_object_type",
+            "doc": "You can provide here a type which will help you identify the type of object to be updated by your webhook. Ex : \"Invoice\".",
+            "editor": "DynamicValue",
+            "name": "webhook_object_type",
+            "optional": true,
+            "rank": 24,
+            "value": "text"
+        },
+        "ACu": {
+            "caption": "Upload result file copy to docMaker",
+            "default_val": false,
+            "doc": "Upload result file into docMaker (in addition to uploading into your app)",
+            "editor": "Checkbox",
+            "name": "upload_to_docmaker",
+            "rank": 16
+        }
+    },
+    "return_value": {
+        "AAf": {
+            "caption": "statuscode",
+            "name": "statuscode",
+            "rank": 2,
+            "value": "text"
+        },
+        "ABc": {
+            "caption": "Output file in base64",
+            "name": "output_file_base64",
+            "rank": 3,
+            "value": "text"
+        },
+        "ACX": {
+            "caption": "Success",
+            "name": "success",
+            "rank": 4,
+            "value": "boolean"
+        },
+        "Ari": {
+            "caption": "Error",
+            "is_list": false,
+            "name": "error",
+            "rank": 1,
+            "value": "text"
+        },
+        "Ath": {
+            "caption": "Your pdf output file",
+            "name": "output_file",
+            "rank": 0,
+            "value": "text"
+        }
+    },
+    "type": "server_side"
+}

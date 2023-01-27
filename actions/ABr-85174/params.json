@@ -1,0 +1,74 @@
+{
+    "category": "plugins",
+    "display": "dM- Convert docx to pdf",
+    "fields": {
+        "ABm": {
+            "caption": "Docx file URL",
+            "doc": "The URL of your docx file. You can use dynamic link to your files stored in your Bubble database (S3 AWS)",
+            "editor": "DynamicValue",
+            "long_text": false,
+            "name": "word_template",
+            "optional": false,
+            "rank": 2,
+            "value": "text"
+        },
+        "ABn": {
+            "caption": "Docx file to be converted=================",
+            "editor": "Label",
+            "name": "info6",
+            "rank": 1
+        },
+        "ABo": {
+            "caption": "Your app's home URL",
+            "doc": "Please provide the home URL of your app.",
+            "editor": "DynamicValue",
+            "name": "appURL",
+            "rank": 0,
+            "value": "text"
+        },
+        "ABp": {
+            "caption": "Base 64 output ?",
+            "default_val": false,
+            "doc": "Check this box if you want to get your output file in base64 format. ",
+            "editor": "Checkbox",
+            "name": "base64",
+            "rank": 4
+        },
+        "ABq": {
+            "caption": "Output file name",
+            "doc": "Please specify output file name (including .pdf)",
+            "editor": "DynamicValue",
+            "name": "filename",
+            "rank": 3,
+            "value": "text"
+        }
+    },
+    "return_value": {
+        "AAf": {
+            "caption": "statuscode",
+            "name": "statuscode",
+            "rank": 2,
+            "value": "text"
+        },
+        "ACM": {
+            "caption": "Your pdf file",
+            "name": "output_file",
+            "rank": 3,
+            "value": "file"
+        },
+        "Ari": {
+            "caption": "Error",
+            "is_list": false,
+            "name": "error",
+            "rank": 1,
+            "value": "text"
+        },
+        "Ath": {
+            "caption": "Your pdf file in base64 format",
+            "name": "output_file_base64",
+            "rank": 0,
+            "value": "text"
+        }
+    },
+    "type": "server_side"
+}

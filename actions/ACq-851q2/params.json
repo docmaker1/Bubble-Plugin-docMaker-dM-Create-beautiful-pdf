@@ -1,0 +1,25 @@
+{
+    "category": "plugins",
+    "display": "dM- U- Download B64 file (free)",
+    "fields": {
+        "ACo": {
+            "caption": "BASE64",
+            "doc": "Set here the BASE 64 data resulting from your pdf or docx creation.",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "base64",
+            "rank": 0,
+            "value": "text"
+        },
+        "ACp": {
+            "caption": "File name with ext.",
+            "doc": "Ex :  file.pdf or new template.docx",
+            "editor": "DynamicValue",
+            "long_text": false,
+            "name": "name",
+            "rank": 1,
+            "value": "text"
+        }
+    },
+    "type": "client_side"
+}

@@ -1,0 +1,169 @@
+{
+    "category": "plugins",
+    "display": "dM- Page screenshot (jpg or png)",
+    "fields": {
+        "ABs": {
+            "caption": "File name",
+            "doc": "Output file name, should include .pdf extension",
+            "editor": "DynamicValue",
+            "long_text": false,
+            "name": "filename",
+            "optional": false,
+            "rank": 0,
+            "value": "text"
+        },
+        "ABt": {
+            "caption": "Page URL",
+            "doc": "URL of the page you want to print",
+            "editor": "DynamicValue",
+            "name": "page_url",
+            "options": "Internal page,External URL",
+            "rank": 2,
+            "value": "text"
+        },
+        "ABu": {
+            "caption": "Full page",
+            "default_val": "false",
+            "doc": "Do you want to take a full page screenshot?",
+            "editor": "Dropdown",
+            "name": "fullPage",
+            "optional": true,
+            "options": "true,false",
+            "rank": 3
+        },
+        "ABv": {
+            "caption": "omitBackground",
+            "default_val": "false",
+            "doc": "Do you want to omit background?",
+            "editor": "Dropdown",
+            "name": "omitBackground",
+            "optional": true,
+            "options": "true,false",
+            "rank": 4
+        },
+        "ABw": {
+            "caption": "Jpeg quality",
+            "default_val": "70",
+            "doc": "Quality of the jpeg output file (the higher the quality, the bigger the size of the image). Qualitycannot be set for png files.",
+            "editor": "Dropdown",
+            "name": "quality",
+            "optional": true,
+            "options": "10,20,30,40,50,60,70,80,90,100",
+            "rank": 8,
+            "value": "text"
+        },
+        "ABx": {
+            "caption": "Top left X",
+            "default_val": "0",
+            "doc": "X coordinate of the top left corner for screenshot",
+            "editor": "DynamicValue",
+            "name": "clipX",
+            "optional": true,
+            "rank": 9,
+            "value": "number"
+        },
+        "ABy": {
+            "caption": "Top left Y",
+            "default_val": 0,
+            "doc": "Y coordinate of the top left corner for screenshot",
+            "editor": "DynamicValue",
+            "name": "clipY",
+            "optional": true,
+            "rank": 10,
+            "value": "number"
+        },
+        "ABz": {
+            "caption": "Screenshot width",
+            "default_val": 800,
+            "doc": "Width of the screen capture",
+            "editor": "DynamicValue",
+            "name": "clipWidth",
+            "optional": true,
+            "rank": 11,
+            "value": "number"
+        },
+        "ACA": {
+            "caption": "Min load time (max 30 sec)",
+            "default_val": 0,
+            "doc": "Minimum time to load the page to be printed in seconds (from 0 to 30).",
+            "editor": "DynamicValue",
+            "name": "min_load_time",
+            "rank": 13,
+            "value": "number"
+        },
+        "ACB": {
+            "caption": "Your app's name",
+            "doc": "Your app homepage URL, ex : https://myapp.bubbleapps.io. You may use the \"Website home URL\" formula in Bubble.",
+            "editor": "DynamicValue",
+            "name": "appURL",
+            "rank": 1,
+            "value": "text"
+        },
+        "ACC": {
+            "caption": "Browser width",
+            "default_val": 860,
+            "doc": "The screen width (in pixels) you wish to use when viewing your page for printing. Defaults to 860 if left empty.",
+            "editor": "DynamicValue",
+            "name": "browserwidth",
+            "rank": 5,
+            "value": "number"
+        },
+        "ACD": {
+            "caption": "Browser height",
+            "default_val": 600,
+            "doc": "The screen heigth (in pixels) you wish to use when viewing your page for printing. Defaults to 600 if left empty.",
+            "editor": "DynamicValue",
+            "name": "browserheight",
+            "rank": 6,
+            "value": "number"
+        },
+        "ACE": {
+            "caption": "Screenshot Height",
+            "default_val": 600,
+            "doc": "If you chose to add \"page numbers\", the page number/ total of pages will be displayed. You also have the option to add custom html footer.",
+            "editor": "DynamicValue",
+            "name": "clipHeight",
+            "options": "No footer,Page numbers,Custom footer",
+            "rank": 12,
+            "value": "number"
+        },
+        "ACF": {
+            "caption": "File type",
+            "default_val": "png",
+            "doc": "Chose output file type",
+            "editor": "Dropdown",
+            "name": "type",
+            "optional": true,
+            "options": "png,jpeg",
+            "rank": 7
+        }
+    },
+    "return_value": {
+        "AAf": {
+            "caption": "statuscode",
+            "name": "statuscode",
+            "rank": 2,
+            "value": "text"
+        },
+        "ABc": {
+            "caption": "Output file in base64",
+            "name": "output_file_base64",
+            "rank": 3,
+            "value": "text"
+        },
+        "Ari": {
+            "caption": "Error",
+            "is_list": false,
+            "name": "error",
+            "rank": 1,
+            "value": "text"
+        },
+        "Ath": {
+            "caption": "Your image file",
+            "name": "output_file",
+            "rank": 0,
+            "value": "text"
+        }
+    },
+    "type": "server_side"
+}

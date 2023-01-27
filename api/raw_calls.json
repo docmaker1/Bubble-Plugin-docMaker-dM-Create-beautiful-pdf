@@ -1,0 +1,23 @@
+{
+    "calls": {
+        "ACZ": {
+            "data_type": "file",
+            "initialized": true,
+            "method": "get",
+            "name": "Copy file",
+            "no_types": true,
+            "publish_as": "action",
+            "rank": 0,
+            "should_reinitialize": true,
+            "url": "https:[file_url]",
+            "url_params": {
+                "ACa": {
+                    "key": "file_url",
+                    "private": true,
+                    "value": "//s3.amazonaws.com/appforest_uf/f1644099902796x910803311059703200/file.pdf"
+                }
+            }
+        }
+    },
+    "human": "dM- "
+}

@@ -1,0 +1,78 @@
+{
+    "category": "plugins",
+    "display": "dM- U- Add nested loop to JSON (free)",
+    "fields": {
+        "ACK": {
+            "caption": "Data type main JSON",
+            "doc": "Name of the data type of main JSON",
+            "editor": "custom_type",
+            "name": "data_type",
+            "rank": 1
+        },
+        "ACL": {
+            "caption": "Main JSON",
+            "doc": "Provide here the JSON for the main loop, which has been created with  \"Create JSON\" action.",
+            "editor": "DynamicValue",
+            "is_list": false,
+            "name": "main",
+            "rank": 0,
+            "value": "text"
+        },
+        "ACM": {
+            "caption": "Data type nested data",
+            "doc": "Name of the data type for nested JSON",
+            "editor": "custom_type",
+            "name": "data_type_nested_data",
+            "rank": 3
+        },
+        "ACN": {
+            "caption": "Values for nested data",
+            "doc": "Dynamic link to the object which contains the list of things you want to transform to JSON.",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "itemlist",
+            "rank": 5,
+            "value": "custom_data_ACM"
+        },
+        "ACO": {
+            "caption": "Nested loop tag name",
+            "doc": "The nested loop tag you are going to use in your template. Must be the exact same string as in the template.",
+            "editor": "DynamicValue",
+            "is_list": false,
+            "name": "tag",
+            "rank": 6,
+            "value": "text"
+        },
+        "ACP": {
+            "caption": "Search field in nested data",
+            "doc": "Field from the nested data type, which will be used to find the main JSON records to be updated. If you want to use the Unique_id, please type _id. ",
+            "editor": "DynamicValue",
+            "name": "search_field_in_nested",
+            "rank": 4,
+            "value": "text"
+        },
+        "ACQ": {
+            "caption": "Search field in main",
+            "doc": "Field from the main data type, which will be used to find the nested JSON records to be inserted. If you want to use the Unique_id, please type _id",
+            "editor": "DynamicValue",
+            "name": "search_field_in_main",
+            "rank": 2,
+            "value": "text"
+        }
+    },
+    "return_value": {
+        "AAU": {
+            "caption": "jsonvalue",
+            "name": "jsonvalue",
+            "rank": 0,
+            "value": "text"
+        },
+        "ADL": {
+            "caption": "nested_lines",
+            "name": "nested_lines",
+            "rank": 1,
+            "value": "number"
+        }
+    },
+    "type": "server_side"
+}

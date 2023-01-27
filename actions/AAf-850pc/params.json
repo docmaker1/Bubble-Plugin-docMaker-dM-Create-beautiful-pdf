@@ -1,0 +1,15 @@
+{
+    "category": "plugins",
+    "display": "dM-  U- Open pdf in a new tab (free)",
+    "fields": {
+        "AAe": {
+            "caption": "URL ",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "url",
+            "rank": 0,
+            "value": "text"
+        }
+    },
+    "type": "client_side"
+}

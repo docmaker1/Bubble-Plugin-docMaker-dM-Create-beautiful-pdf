@@ -1,0 +1,281 @@
+{
+    "category": "plugins",
+    "display": "dM- Fill & convert docx",
+    "fields": {
+        "AAj": {
+            "caption": "Docx template url",
+            "doc": "The URL of your template file. You can use dynamic link to your files stored in your Bubble database (S3 AWS)",
+            "editor": "DynamicValue",
+            "long_text": false,
+            "name": "word_template",
+            "optional": true,
+            "rank": 4,
+            "value": "text"
+        },
+        "AAk": {
+            "caption": "Text substitution tags",
+            "doc": "Insert here the tags from your  docx template. Ex of text tag : {Firstname} in your docx template, use tag Firstname here, and enter the dynamic value to replace this tag. For images, if you have {%image1} tag in your template, use here the image1 tag, and provide the iamge URL as replacement value. Do not use spaces for tag names. ",
+            "editor": "key_value_list",
+            "name": "sub_tags",
+            "rank": 7,
+            "value": "text"
+        },
+        "AAl": {
+            "caption": "Template ===================================",
+            "editor": "Label",
+            "name": "info6",
+            "rank": 3
+        },
+        "AAm": {
+            "caption": "Text data ===================================",
+            "editor": "Label",
+            "name": "info7",
+            "rank": 6
+        },
+        "AAn": {
+            "caption": "Loops ====================================",
+            "doc": "Ou",
+            "editor": "Label",
+            "name": "info8",
+            "rank": 11
+        },
+        "AAo": {
+            "caption": "JSON data for loops",
+            "doc": "Provide here data fror the repeating groups in your app to your template. Data should be in JSON format (see example in plugin tab).",
+            "editor": "key_value_list",
+            "name": "loops_sub_data",
+            "rank": 12,
+            "value": "text"
+        },
+        "AAy": {
+            "caption": "Images forced width",
+            "doc": "Use this field if you want to force a specific width for your images when inserted in the docx file. The height will adjust automatically. If empty, your images will keep their original dimensions.",
+            "editor": "DynamicValue",
+            "name": "forceWidth",
+            "optional": true,
+            "rank": 10,
+            "value": "number"
+        },
+        "ABA": {
+            "caption": "Output file format",
+            "default_val": "pdf",
+            "doc": "Please chose which file format you want in return from this plugin. You can get docx or pdf files stored in your Bubble app, or docx/ pdf files in base64 format. ",
+            "editor": "Dropdown",
+            "name": "outputType",
+            "options": "docx,pdf",
+            "rank": 0
+        },
+        "ABB": {
+            "caption": "Advanced ================================",
+            "editor": "Label",
+            "name": "info9",
+            "rank": 15
+        },
+        "ABC": {
+            "caption": "emptyTags",
+            "default_val": "undefined",
+            "doc": "If some values are missing in your data input, you can decide on what should be happen to the corresponding tags in the output file : chose \"removeTags\" if you want an empty string to replace your missing tags, \"leaveTags\" if you want to leave the missing tags (ex : when you are creating new word templates ith this plugin), or \"undefined\" where all tags with missing data will be replaced by \"undefined\". This works only for simple tags.",
+            "editor": "Dropdown",
+            "name": "emptytags",
+            "options": "leaveTags,removeTags,undefined",
+            "rank": 16
+        },
+        "ABD": {
+            "caption": "Images substitute tags",
+            "doc": "Insert here the image tags from your docx template. Ex : image1",
+            "editor": "key_value_list",
+            "name": "image_sub_tags",
+            "optional": true,
+            "rank": 9,
+            "value": "text"
+        },
+        "ABE": {
+            "caption": "Images ====================================",
+            "editor": "Label",
+            "name": "info10",
+            "rank": 8
+        },
+        "ABJ": {
+            "caption": "Get output file in base64 format",
+            "default_val": true,
+            "doc": "Check this box if you want to get your output file in base64 format. ",
+            "editor": "Checkbox",
+            "name": "base64",
+            "rank": 19
+        },
+        "ABK": {
+            "caption": "Your app index URL",
+            "doc": "Your app homepage URL, ex : https://myapp.bubbleapps.io. You may use the \"Website home URL\" formula in Bubble.",
+            "editor": "DynamicValue",
+            "name": "appURL",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "ABM": {
+            "caption": "Output file name",
+            "doc": "Name of the output file including extension. Ex : myfile.pdf or mydocument.docx",
+            "editor": "DynamicValue",
+            "name": "filename",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "ABN": {
+            "caption": "Conditions ================================",
+            "editor": "Label",
+            "name": "info10",
+            "rank": 13
+        },
+        "ABO": {
+            "caption": "Conditions tags (yes/no)",
+            "doc": "Provide here condition tags with yes/no values",
+            "editor": "key_value_list",
+            "name": "conditions_tags",
+            "rank": 14,
+            "value": "boolean"
+        },
+        "ACH": {
+            "caption": "Metadata",
+            "default_val": "",
+            "doc": "This field will be visible in your docMaker.co dashboard logs. You may use it to identify each docMaker request in your logs and error logs.",
+            "editor": "DynamicValue",
+            "name": "metadata",
+            "optional": true,
+            "rank": 20,
+            "value": "text"
+        },
+        "ACI": {
+            "caption": "Dynamic sub_tags",
+            "default_val": "",
+            "doc": "In this field you may add aditional data (sub tags, images, loops etc...) in JSON format.",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "dynamic_sub_tags",
+            "optional": true,
+            "rank": 21,
+            "value": "text"
+        },
+        "ACg": {
+            "caption": "Webhook (for large files)=======================",
+            "editor": "Label",
+            "name": "info11",
+            "rank": 22
+        },
+        "ACh": {
+            "caption": "Webhook url",
+            "doc": "If you have a large file to print to pdf, you may want to receive the output file to a webhook in your app in order to avoid plugin timeouts. Type here the URL of your webhook.",
+            "editor": "DynamicValue",
+            "name": "webhook_url",
+            "optional": true,
+            "rank": 23,
+            "value": "text"
+        },
+        "ACi": {
+            "caption": "Webhook object id",
+            "doc": "ID of the object which you can use in your webhook workflow in order to attach the output file to an object in your database.",
+            "editor": "DynamicValue",
+            "name": "webhook_object",
+            "optional": true,
+            "rank": 24,
+            "value": "text"
+        },
+        "ACj": {
+            "caption": "webhook_object_type",
+            "doc": "You can provide here a type which will help you identify the type of object to be updated by your webhook. Ex : \"Invoice\".",
+            "editor": "DynamicValue",
+            "name": "webhook_object_type",
+            "optional": true,
+            "rank": 25,
+            "value": "text"
+        },
+        "ACr": {
+            "caption": "pdf engine",
+            "default_val": "Standard",
+            "doc": "We have 2 different pdf engines. The first one (custom) gives you more flexibility in terms of Fonts and has a facter response time. The other one (Standard) offers a better accuracy and will better replicate your docx layout.",
+            "editor": "Dropdown",
+            "name": "pdfengine",
+            "optional": true,
+            "options": "Custom,Standard",
+            "rank": 17
+        },
+        "ACs": {
+            "caption": "Upload result file copy to docMaker",
+            "default_val": false,
+            "doc": "Upload result file into docMaker (in addition to uploading into your app)",
+            "editor": "Checkbox",
+            "name": "upload_to_docmaker",
+            "rank": 18,
+            "value": "text"
+        },
+        "ACt": {
+            "caption": "Template ID",
+            "doc": "As an alternative to providing your tempate's URL, you can use your docx template's ID if you have uploaded it into docMaker dashboard.",
+            "editor": "DynamicValue",
+            "name": "templateid",
+            "optional": true,
+            "rank": 5,
+            "value": "text"
+        },
+        "ACv": {
+            "caption": "Privacy ====================================",
+            "editor": "Label",
+            "name": "info12",
+            "rank": 27
+        },
+        "ACw": {
+            "caption": "Private result file",
+            "default_val": false,
+            "doc": "Check this box if you want your result file to be private.",
+            "editor": "Checkbox",
+            "name": "private",
+            "rank": 28
+        },
+        "ACx": {
+            "caption": "Attach to",
+            "doc": "The thing to which you want to attach your file (if empty, file will be attached to current user).",
+            "editor": "DynamicValue",
+            "name": "attach_to",
+            "optional": true,
+            "rank": 29,
+            "value": "_any_thing"
+        },
+        "ACy": {
+            "caption": "Upload result file into Bubble",
+            "default_val": true,
+            "doc": "For webhooks you can decide whether the result file should be uploaded to your Bubble app or not. If not, then check the \"upload to docMaker\" checkbox. Your file will be available in docMaker during 48h.",
+            "editor": "Checkbox",
+            "name": "bubble_upload",
+            "rank": 26
+        }
+    },
+    "return_value": {
+        "AAf": {
+            "caption": "statuscode",
+            "name": "statuscode",
+            "rank": 1,
+            "value": "text"
+        },
+        "ABL": {
+            "caption": "output_file",
+            "name": "output_file",
+            "rank": 0,
+            "value": "file"
+        },
+        "Ari": {
+            "caption": "Error",
+            "is_list": false,
+            "name": "error",
+            "rank": 2,
+            "value": "text"
+        },
+        "Ath": {
+            "caption": "output_file_base64",
+            "name": "output_file_base64",
+            "rank": 3,
+            "value": "text"
+        }
+    },
+    "type": "server_side",
+    "use_packages": false
+}

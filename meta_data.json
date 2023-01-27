@@ -1,0 +1,17 @@
+{
+    "categories": {
+        "0": "productivity",
+        "1": "customer support",
+        "2": "payment",
+        "3": "ecommerce",
+        "4": "small business"
+    },
+    "demo_page": "https://docxtopdfplugintest.bubbleapps.io/version-test",
+    "description": "Super easy dynamic pdf creation ! Insert dynamic data (text, loops, conditions) and images in your docx templates and get pixel-perfect pdfs !\nVideo tutorial provided. Fully integrated with Bubble, get your 100 first conversions for free !\n\nThis plugin lets you :\n* Fill dynamic data (text or images) into a word document template (.docx) and print this document to pdf\n* Print a webpage URL to pdf\n \nGet your API key : https://docmaker.co/\n\n\nIt is a perfect tool if you need to create invoices, estimates, proposals, email attachments, reports etc....\nWe offer 100 calls free for any new subscription, and then 3 plans, starting as low as 12$ monthly for 500 calls per month, the most affordable solution on the market! ",
+    "image": "//s3.amazonaws.com/appforest_uf/f1617004434773x203636304662865300/New%20docxtopdf%20logo%20-2.png",
+    "license": "open_source",
+    "link": "https://docmaker.co/bubble-plugin",
+    "name": "docMaker (dM) Create beautiful pdf",
+    "plugin_instructions": "The plugin consists of 2 main functionnalities :\n1) \"Fill & convert docx\" action : insert data (text, images and repeating groups lines in tables) in your docx template and retrieve an updated docx file, or convert to pdf\n2) \"Create pdf from webpage\": provide a webpage URL and print it to pd.\n\nThe resulting files are directly uploaded to your app. They can also come in Base 64 format, so that you can directly attach them to your Sendgrid emails or transfer the data as you wish.\n\n*******Tutorial videos***************\nhttps://docmaker.co/bubble-plugin?menu=videos\n\n*******Demo website- run mode*********\nhttps://docxtopdfplugintest.bubbleapps.io/version-test\n\n*******Demo website- editor*************\nhttps://bubble.io/page?type=page&name=index&id=docxtopdfplugintest&tab=tabs-1\n\n\nAdditional actions in this plugin (no credits used for these) :\n\n- \"create JSON file\" : useful when you need to use loops data (data from repeating groups) for the plugin\n- \"open pdf in a new tab\" : to open and visualize your pdf file in a new tab\n- \"preview docx in a new tab\" : to open and visualize your docx file in a new tab",
+    "sa_node_version": 14
+}

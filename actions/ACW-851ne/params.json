@@ -1,0 +1,47 @@
+{
+    "category": "plugins",
+    "display": "dM- U- JSON for dynamic tags (free)",
+    "fields": {
+        "ACS": {
+            "caption": "data_type",
+            "doc": "Name of the data type you are using to create the JSON",
+            "editor": "custom_type",
+            "name": "data_type",
+            "rank": 0
+        },
+        "ACT": {
+            "caption": "itemlist",
+            "doc": "Dynamic link to the object which contains the list of things you want to transform to JSON.",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "itemlist",
+            "rank": 1,
+            "value": "custom_data_ACS"
+        },
+        "ACU": {
+            "caption": "Sub_tags_column",
+            "doc": "Select the field which contains the substitution tags",
+            "editor": "custom_field_ACS",
+            "name": "tags_column",
+            "rank": 2,
+            "value": "text"
+        },
+        "ACV": {
+            "caption": "values_column",
+            "doc": "Name of the column which contains the value",
+            "editor": "custom_field_ACS",
+            "name": "values_column",
+            "rank": 3,
+            "value": "text"
+        }
+    },
+    "return_value": {
+        "AAU": {
+            "caption": "jsonvalue",
+            "name": "jsonvalue",
+            "rank": 0,
+            "value": "text"
+        }
+    },
+    "type": "server_side"
+}
