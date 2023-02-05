@@ -93,8 +93,7 @@ function(properties, context) {
     };
     //Add dynamic sub_tags to customObj
    if(properties.dynamic_sub_tags){
-   		 var str=properties.dynamic_sub_tags.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
-     	customObj = Object.assign(customObj, JSON.parse(str));
+     	customObj = Object.assign(customObj, JSON.parse(properties.dynamic_sub_tags));
      }
     
 	 

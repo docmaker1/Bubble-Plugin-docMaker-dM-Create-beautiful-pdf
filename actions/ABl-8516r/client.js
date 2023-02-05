@@ -1,16 +1,29 @@
 function(properties, context) {
 
- fetch("https:" + properties.file)
-  .then(resp => resp.blob())
-  .then(blob => {
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.style.display = 'none';
-    a.href = url;
-    a.download =  properties.name
-    document.body.appendChild(a);
-    a.click();
-    window.URL.revokeObjectURL(url);
- })
+  var file = properties.file;
+  var fileName = properties.name;
+  
+  var blob = null;
+  
+  if (!file) {
+    alert("Please select a file!");
+  } else if (file.split(",").length > 1) {
+    alert("Please select only a single file!");
+  } else {
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("GET", file); 
+    xhr.responseType = "blob";
+    xhr.onload = function() // Runs after the request is received
+    {
+      if (xhr.status != 200) {
+        console.log("Status error: " + xhr.status);
+        alert("There was an issue generating your file. Please check your file type and try again.");
+      } else {
+      blob = xhr.response;
+      download(blob, fileName);
+      }
+    }
+    xhr.send();
+  }
 
 }
